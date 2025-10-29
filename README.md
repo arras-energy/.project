@@ -1,8 +1,26 @@
 # Arras Energy project template
 
-To use this template, run the command
+Before using the `gridlabd project` subcommand you must login to GitHub at the command, e.g.,
+
+    git auth login
+
+To create a project using this template, run the command
 
     gridlabd project create PROJECTNAME
+
+where `PROJECTNAME` is the name of your project.
+
+You can edit an existing project with the command
+
+    gridlabd project edit PROJECTNAME
+
+You can save your work using the command
+
+    gridlabd project save PROJECTNAME
+
+To open the project repository on GitHub, use the command
+
+    gridlabd project open PROJECTNAME
 
 For more details see `gridlabd project help`.
 
