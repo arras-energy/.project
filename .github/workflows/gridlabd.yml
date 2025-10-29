@@ -1,0 +1,25 @@
+name: gridlabd
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: lfenergy/arras:latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Run scripts and/or simulation
+      run: |
+        ( test -f gridlabd.sh && source gridlabd.sh || false ) || ( test -f gridlabd.glm && gridlabd gridlabd.glm || true )
+
+    - name: Save results
+      uses: actions/upload-artifact@v4
+      with:
+        name: results
+        path: .
