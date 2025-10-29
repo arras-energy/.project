@@ -1,3 +1,5 @@
+[![gridlabd](https://github.com/arras-energy/.project/actions/workflows/gridlabd.yml/badge.svg)](https://github.com/arras-energy/.project/actions/workflows/gridlabd.yml)
+
 # Arras Energy project template
 
 Before using the `gridlabd project` subcommand you must login to GitHub at the command, e.g.,
